@@ -1,0 +1,18 @@
+server:
+  port: 7988
+spring:
+  application:
+    name: activiti8_workflow
+  datasource:
+    hikari:
+      username: root
+      password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://IP:PORT/activiti8?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC&nullCatalogMeansCurrent=true
+  activiti:
+    database-schema-update: true
+    deployment-mode: never-fail # ?? SpringAutoDeployment
+    check-process-definitions: false # ???????? ????recourse?????processes????
+    # ?????
+    history-level: full
+    db-history-used: true
